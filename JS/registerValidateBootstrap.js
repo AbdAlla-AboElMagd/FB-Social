@@ -1,3 +1,8 @@
+/********************************* Start Documentation ****************************************
+ * @File      : index.html
+ * @Author    : AbdAlla AboElMagd
+ * @Brief     : This is The Register Validate JS File For register.html Page of a Page Like Facebook (For Learning Purpose Only)
+ *********************************** End Documentation ****************************************/
 import { showingAlert } from "./handleAlert.js";
 
 /*************** Handling Login User ************************/

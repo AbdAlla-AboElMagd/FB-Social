@@ -1,3 +1,8 @@
+ /********************************* Start Documentation ****************************************
+* @File      : handleAlert.js
+* @Author    : AbdAlla AboElMagd
+* @Brief     : That is JS File For Handling Alert Messages
+*********************************** End Documentation ****************************************/ 
 /************* Handling Alert *****************/
 const alertCloseBtn = document.getElementById("alertCloseBtn");
 if (alertCloseBtn) {

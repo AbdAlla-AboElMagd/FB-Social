@@ -1,7 +1,17 @@
+ /********************************* Start Documentation ****************************************
+* @File      : loginValidate.js
+* @Author    : AbdAlla AboElMagd
+* @Brief     : That is The Login Validate JS File For the  Page of a Page Like Facebook (For Learning Purpose Only)
+*********************************** End Documentation ****************************************/ 
 import { showingAlert } from "./handleAlert.js";
 const loginForm = document.getElementById("loginForm");
 const submitBtn = document.getElementById("submitBtn");
 const btnRegister = document.getElementById("btnRegister");
+
+/*************** Handling Register Button ****************** */
+btnRegister.onclick = () => {
+  window.location.href = "./register.html";
+};
 /*************** Handling Login User ************************/
 function isloggedIn() {
   if (
@@ -32,7 +42,6 @@ window.onload = function () {
 
 /************************************************************/
 /************* Email Validation *****************/
-
 
 const email = document.querySelector("#email");
 
