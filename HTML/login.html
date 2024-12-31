@@ -1,0 +1,184 @@
+<!-- /********************************* Start Documentation ****************************************
+* @File      : Login.html
+* @Author    : AbdAlla AboElMagd
+* @Brief     : That is The Login Page of a Website Like Facebook (For Learning Purpose Only)
+*********************************** End Documentation ****************************************/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <meta name="author" content="Abd-Alla El-Bassuony" />
+    <meta name="description" content="Login Page Like Facebook" />
+    <link
+      rel="icon"
+      href="../Resources/Images/Abd-Alla-Abo-ElMagd-logo-white-black-bg.jpeg"
+      type="image/jpeg"
+    />
+    <link
+      href="../Resources/Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Resources/Bootstrap//bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./images/aIcon.jpeg" />
+    <link rel="stylesheet" href="../CSS/login.css" />
+  </head>
+  <body>
+    <!--Whole Page-->
+    <div class="d-flex flex-column">
+      <!--Middle Main Section-->
+      <div style="background-color: #f2f4f7">
+        <div
+          class="container d-flex flex-md-row flex-column justify-content-center align-items-center"
+          style="max-width: 930px; height: 720px"
+        >
+          <div class="col-xl-8 col-lg-5 col-md-4 col-sm-9">
+            <img
+              width="320px"
+              style="position: relative; right: 30px"
+              src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"
+              alt="Facebook"
+            />
+            <h2>
+              Facebook helps you connect and share with the people in your life.
+            </h2>
+          </div>
+          <div class="mt-5 col-lg-4 col-md-7 col-sm-9">
+            <div class="col-12">
+              <!-- <h1>Sign in</h1> -->
+              <div id="lResponse" style="display: none"></div>
+              <!-- Bootstrap Alert -->
+              <div
+                class="alert alert-dismissible fade show"
+                role="alert"
+                id="alertResponse"
+                style="display: none"
+              >
+                <strong id="strongAlertMsg"></strong>
+                <span id="normalAlertMsg"></span>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  id="alertCloseBtn"
+                ></button>
+              </div>
+              <!-- End of Bootstrap Alert -->
+              <div
+                class="p-1 border-0 rounded-4 shadow-lg p-3 m-3 mb-3 mt-3"
+                style="width: 400px"
+              >
+                <form
+                  action="../index.html"
+                  method="post"
+                  name="loginForm"
+                  id="loginForm"
+                  novalidate
+                >
+                  <div class="">
+                    <div class="input-group has-validation m-2">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        tapindex="2"
+                        accesskey="a"
+                        placeholder="Email address or phone number"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        Write a valid E-mail ex:a@a.com or <br />
+                        Write a valid 11 Number as phone Number
+                      </div>
+                    </div>
+
+                    <div class="input-group has-validation m-2">
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="pass"
+                        id="pass"
+                        tabindex="3"
+                        accesskey="p"
+                        placeholder="Password"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Password must be at least 6 characters
+                      </div>
+                    </div>
+
+                    <div class="row m-2">
+                      <input
+                        type="submit"
+                        id="submitBtn"
+                        class="btn btn-primary col-12 mb-3 mt-3 fw-bold fs-4"
+                        value="Log in"
+                        style="height: 50px"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <hr />
+                  </div>
+                </form>
+                <div class="text-center">
+                  <button
+                    class="btn fw-bold fs-5"
+                    style="
+                      height: 50px;
+                      background-color: #42b72a;
+                      color: white;
+                    "
+                    id="btnRegister"
+                  >
+                    Create new account
+                  </button>
+                </div>
+
+                <p class="opacity-50 mt-3">
+                  Skip login and Explore Anonymus
+                  <a href="../index.html">Home Page</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--footer-->
+      <div
+        class="d-flex flex-column justify-content-center align-content-center"
+      >
+        <div class="text-center">
+          <a href="#">Arabic</a>
+          <a href="#">English</a>
+        </div>
+        <hr />
+        <div class="text-center">
+          <a href="./register.html">sign Up</a>
+          <a href="./login.html">log in</a>
+          <a href="#">Messeenger</a>
+          <a href="#">Facebook lite</a>
+          <a href="#">Video</a>
+          <a href="#">Places</a>
+          <a href="#">Games</a>
+          <a href="#">Market</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../JS/handleAlert.js"></script>
+    <script type="module" src="../JS/loginValidationBootstrap.js"></script>
+  </body>
+</html>
+
+<!-- 
+/*********************************Start Log***************************************************
+    User               Date                Brief
+**********************************************************************************************
+Abd-Alla AboElMagd    29Dec2024           Finishing the Login Page with its Main HTML Content
+***********************************************************************************************/
+-->

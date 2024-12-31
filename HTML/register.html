@@ -1,0 +1,344 @@
+<!-- /********************************* Start Documentation ****************************************
+* @File      : register.html
+* @Author    : AbdAlla AboElMagd
+* @Brief     : That is The Register Page of a website Like Facebook (For Learning Purpose Only)
+*********************************** End Documentation ****************************************/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <meta name="author" content="Abd-Alla El-Bassuony" />
+    <meta name="description" content="Register Page Like Facebook" />
+    <link
+      rel="icon"
+      href="../Resources/Images/Abd-Alla-Abo-ElMagd-logo-white-black-bg.jpeg"
+      type="image/jpeg"
+    />
+    <link
+      href="../Resources/Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../Resources/Bootstrap//bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./images/aIcon.jpeg" />
+  </head>
+  <body>
+    <!--Whole Page-->
+    <div class="d-flex flex-column">
+      <!--Middle Main Section-->
+      <div
+        style="background-color: #f2f4f7; align-items: center"
+        class="d-flex flex-column"
+      >
+        <img
+          width="320px"
+          src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"
+          alt="Facebook"
+        />
+        <div>
+          <div class="col-12" style="max-width: 435px">
+            <!-- <h1>Creating New User</h1> -->
+            <div id="rResponse" style="display: none"></div>
+            <!-- Bootstrap Alert -->
+            <div
+              class="alert alert-dismissible fade show"
+              role="alert"
+              id="alertResponse"
+              style="display: none"
+            >
+              <strong id="strongAlertMsg"></strong>
+              <span id="normalAlertMsg"></span>
+              <button
+                type="button"
+                class="btn-close"
+                id="alertCloseBtn"
+              ></button>
+            </div>
+            <!-- End of Bootstrap Alert -->
+            <div
+              class="p-1 border-0 rounded-4 shadow-lg p-3 m-3 mb-3 mt-3 bg-white"
+            >
+              <form
+                action="../index.html"
+                method="post"
+                name="register"
+                id="register"
+                novalidate
+              >
+                <div class="">
+                  <fieldset>
+                    <legend class="text-center m-1 fw-bold">Sign Up</legend>
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="input-group has-validation m-2">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            name="firstName"
+                            tabindex="1"
+                            accesskey="n"
+                            placeholder="First name"
+                            required
+                          />
+
+                          <div class="invalid-feedback">
+                            Name should be atleast 3-Charectars
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="input-group has-validation m-2">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="surname"
+                            name="name"
+                            tabindex="1"
+                            accesskey="n"
+                            placeholder="Surname"
+                            required
+                          />
+
+                          <div class="invalid-feedback">
+                            Name should be atleast 3-Charectars
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Date of birth-->
+                    <div class="row m-0">
+                      <div class="col-12" style="font-size: 12px">
+                        Date of birth
+                      </div>
+                      <!-- Days -->
+                      <div class="col-4">
+                        <select
+                          name="birthDay"
+                          id="birthDay"
+                          class="form-control"
+                        >
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                      <!-- Months -->
+                      <div class="col-4">
+                        <select
+                          name="birthMonth"
+                          id="birthMonth"
+                          class="form-control"
+                        >
+                          <option value="1">Jan</option>
+                          <option value="2">Dec</option>
+                        </select>
+                      </div>
+                      <!-- Years -->
+                      <div class="col-4">
+                        <select
+                          name="birtYear"
+                          id="birthYear"
+                          class="form-control"
+                        >
+                          <option value="2024">2024</option>
+                          <option value="2023">2023</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Gender -->
+                    <!-- Date of birth-->
+                    <div class="row m-0">
+                      <div class="col-12" style="font-size: 12px">Gender</div>
+
+                      <!-- Female -->
+                      <div class="col-4">
+                        <label
+                          class="btn border w-100 d-flex justify-content-between"
+                          for="female"
+                          >Female
+                          <input
+                            class=""
+                            type="radio"
+                            id="female"
+                            name="gender"
+                            value="female"
+                          />
+                        </label>
+                      </div>
+
+                      <!-- Male -->
+                      <div class="col-4">
+                        <label
+                          class="btn border w-100 d-flex justify-content-between"
+                          for="male"
+                          >Male
+                          <input
+                            class=""
+                            type="radio"
+                            id="male"
+                            name="gender"
+                            value="male"
+                          />
+                        </label>
+                      </div>
+
+                      <!-- Custom -->
+                      <div class="col-4">
+                        <label
+                          class="btn border w-100 d-flex justify-content-between"
+                          for="custom"
+                          >Custom
+                          <input
+                            class=""
+                            type="radio"
+                            id="custom"
+                            name="gender"
+                            value="custom"
+                          />
+                        </label>
+                      </div>
+                    </div>
+                    <!-- End of Gender -->
+
+                    <!-- Custom Gender -->
+                    <div id="customGenderDiv" class="d-none">
+                      <select
+                        class="form-control m-2"
+                        name="pronoun"
+                        id="pronoun"
+                      >
+                        <option value="0" selected disabled>
+                          Select Pronoun
+                        </option>
+                        <option value="1">
+                          She: "Wish her a happy birthday!"
+                        </option>
+                        <option value="2">
+                          He: "Wish him a happy birthday!"
+                        </option>
+                        <option value="3">
+                          They: "Wish them a happy birthday!"
+                        </option>
+                      </select>
+
+                      <input
+                        type="text"
+                        name="genderOptional"
+                        id="genderOptional"
+                        placeholder="Gender (Optional)"
+                        class="form-control m-2"
+                      />
+                    </div>
+                    <!-- Disabled if Custome -->
+                    <div class="input-group has-validation m-2">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        tapindex="2"
+                        accesskey="a"
+                        placeholder="Mobile number or email address"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        Write a valid E-mail ex:a@a.com or <br />
+                        Write a valid 11 Number as phone Number
+                      </div>
+                    </div>
+
+                    <div class="input-group has-validation m-2">
+                      <label for="pass" class="form-label w-100 fw-bold"
+                        >Password:</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="pass"
+                        id="pass"
+                        tabindex="3"
+                        accesskey="p"
+                        placeholder="Password"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Password must be at least 6 characters
+                      </div>
+                    </div>
+
+                    <div style="font-size: 11px">
+                      <div class="mb-2 mt-4">
+                        People who use our service may have uploaded your
+                        contact information to Facebook.
+                        <a href="#">Learn more.</a>
+                      </div>
+                      <div class="mb-2 mt-1">
+                        By clicking Sign Up, you agree to our
+                        <a href="#">Terms, Privacy Policy</a> and
+                        <a href="#">Cookies Policy.</a> You may receive SMS
+                        notifications from us and can opt out at any time.
+                      </div>
+                    </div>
+
+                    <div class="row m-2 justify-content-center">
+                      <input
+                        type="submit"
+                        class="btn btn-success col-6 mb-3 mt-3 fs-5 fw-bold"
+                        value="Sign Up"
+                        style="
+                          height: 40px;
+                          background-color: #00a400;
+                          color: white;
+                        "
+                      />
+                      <div>
+                        <p class="text-center">
+                          <a href="./login.html">Already have acounct ?</a>
+                        </p>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <div
+        class="d-flex flex-column justify-content-center align-content-center"
+      >
+        <div class="text-center">
+          <a href="#">Arabic</a>
+          <a href="#">English</a>
+        </div>
+        <hr />
+        <div class="text-center">
+          <a href="./register.html">sign Up</a>
+          <a href="./login.html">log in</a>
+          <a href="#">Messeenger</a>
+          <a href="#">Facebook lite</a>
+          <a href="#">Video</a>
+          <a href="#">Places</a>
+          <a href="#">Games</a>
+          <a href="#">Market</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../JS/handleAlert.js"></script>
+    <script type="module" src="../JS/registerValidateBootstrap.js"></script>
+  </body>
+</html>
+
+<!-- 
+/*********************************Start Log***************************************************
+    User               Date                Brief
+**********************************************************************************************
+Abd-Alla AboElMagd    29Dec2024           Finishing the Register Page with its Main HTML Content
+***********************************************************************************************/
+-->

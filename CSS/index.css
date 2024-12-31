@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #252728;
+  /* background-color: #1c1e21; */
+  /* background-color: #343a40; */
+  /* color: ; */
+  margin: 0;
+}
+
+.navbarClass {
+  background-color: #252728;
+  height: 80px;
+}
+
+.mainContent {
+  position: absolute;
+  background-color: #1c1e21;
+}
+
+.left {
+  position: fixed;
+  top: 100px;
+}
+
+.right {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.mainContent {
+  margin-top: 80px;
+}
+
+.middle {
+  background-color: #1c1e21;
+}
+
+.userDiv {
+  display: block;
+}
+
+.userName {
+  display: inline-block;
+}
+
+.userImg {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}

@@ -1,0 +1,391 @@
+<!-- /********************************* Start Documentation ****************************************
+* @File      : index.html
+* @Author    : AbdAlla AboElMagd
+* @Brief     : That is The Main Page of a Page Like Facebook (For Learning Purpose Only)
+*********************************** End Documentation ****************************************/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FBSocial</title>
+    <meta name="author" content="Abd-Alla El-Bassuony" />
+    <meta name="description" content="Page Like Facebook" />
+    <link
+      rel="icon"
+      href="./Resources/Images/Abd-Alla-Abo-ElMagd-logo-white-black-bg.jpeg"
+      type="image/jpeg"
+    />
+    <link
+      href="./Resources/Bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Resources/Bootstrap//bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./JS/index.js"></script>
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark" data-bs-theme="dark">
+    <!--****************************************************-->
+    <!-- Navbar -->
+    <div class="fixed-top navbarClass">
+      <ul class="nav justify-content-between p-3" data-bs-theme="dark">
+        <!--Left-->
+        <div class="d-flex flex-row">
+          <a href="./index.html"
+            ><img
+              src="./Resources/Images/Facebook_Logo.png"
+              width="40px"
+              height="40px"
+              alt="Facebook_Logo"
+          /></a>
+
+          <div class="nav-item d-block d-md-none">
+            <a class="nav-link" href="#">
+              <i class="bi bi-search" style="font-size: 24px"></i>
+            </a>
+          </div>
+
+          <div class="d-none d-md-block">
+            <input
+              class="form-control ms-2 me-0"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </div>
+        </div>
+        <!--Middle-->
+        <div class="d-flex flex-row d-none d-md-flex">
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <i class="bi bi-house-door-fill" style="font-size: 24px"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-shop" style="font-size: 24px"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-people-fill" style="font-size: 24px"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-controller" style="font-size: 24px"></i>
+            </a>
+          </li>
+        </div>
+        <!--Right-->
+        <div class="d-flex flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-list" style="font-size: 24px"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-messenger" style="font-size: 24px"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-bell-fill" style="font-size: 24px"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <div class="dropdown">
+              <img
+                src="./Resources/Images/images.jpeg"
+                alt="Profile Image"
+                width="50px"
+                height="50px"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                class="dropdown-toggle rounded-circle"
+              />
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li>
+                  <a class="dropdown-item" href="#" data-value="1">Home</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-value="2">About</a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    id="btnSignOut"
+                    href="#"
+                    data-value="3"
+                    >Sign Out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="bi bi-person-circle"></i>
+            </a>
+          </li> -->
+        </div>
+      </ul>
+    </div>
+    <!--****************************************************-->
+    <!-- Main Content-->
+    <!-- Left -->
+    <div class="left d-none d-lg-block ms-1 ps-3" style="z-index: 1">
+      <ul class="nav flex-column">
+        <li class="nav-item btn btn-dark">
+          <img
+            src="./Resources/Images/images.jpeg"
+            alt="Profile Image"
+            width="50px"
+            height="50px"
+            class="rounded-circle"
+          />
+          <span id="LoggedInUserName" class="fw-bold"></span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-people-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Friends</span>
+        </li>
+
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-clock-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Memmories</span>
+        </li>
+
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-bookmark-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Saved</span>
+        </li>
+
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi bi-people-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Groups</span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi bi-play-btn-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Videos</span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-shop-window" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Marketplace</span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi-postcard-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Feeds</span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-calendar2-event-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Events</span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-bar-chart-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Ads Manager</span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-heart-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">Fundraisers</span>
+        </li>
+        <li class="nav-item"></li>
+        <li
+          class="nav-item btn btn-dark d-flex justify-content-start align-items-center"
+        >
+          <i class="bi bi-caret-down-fill" style="font-size: 25px"></i>
+          <span class="ms-3 fs-5">See more</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mainContent justify-content-between d-flex w-100">
+      <!-- left margin in middle -->
+      <div class="d-none d-lg-block w-25"></div>
+      <!-- Middle -->
+      <div class="middle pt-5 col-lg-6 col-md-8 col-sm-10 col-12">
+        <div class="">
+          <div id="postsList">
+            <div class="p-3 card me-3 ms-3">
+              <form action="#">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img
+                    src="./Resources/Images/images.jpeg"
+                    alt="Profile Image"
+                    width="50px"
+                    height="50px"
+                    class="rounded-circle me-3"
+                  />
+                  <input
+                    type="text"
+                    placeholder="What's on your mind?"
+                    class="form-control rounded-4"
+                  />
+                </div>
+                <hr />
+                <div class="row">
+                  <div
+                    class="col-4 d-flex btn btn-dark d-flex justify-content-start align-items-center"
+                  >
+                    <i
+                      class="bi bi-camera-video-fill"
+                      style="font-size: 25px"
+                    ></i>
+                    <span class="ms-3">Live Viedo</span>
+                  </div>
+                  <div
+                    class="col-4 d-flex btn btn-dark d-flex justify-content-start align-items-center"
+                  >
+                    <i class="bi bi-image-fill" style="font-size: 25px"></i>
+                    <span class="ms-3">Photo/Video</span>
+                  </div>
+                  <div
+                    class="col-4 d-flex btn btn-dark d-flex justify-content-start align-items-center"
+                  >
+                    <i class="bi bi-emoji-laughing" style="font-size: 25px"></i>
+                    <span class="ms-3">Feeling/activity</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- Stories -->
+            <div id="stories mt-5">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner" id="parentStories">
+                  <!-- <div class="carousel-item active">
+                    <div class="row ps-4 pe-4" id="firstChildStories">
+                      <img
+                        src="./Resources/Images/images.jpeg"
+                        class="col-3"
+                        alt="..."
+                      />
+                      <img
+                        src="./Resources/Images/images.jpeg"
+                        class="col-3"
+                        alt="..."
+                      />
+                      <img
+                        src="./Resources/Images/images.jpeg"
+                        class="col-3"
+                        alt="..."
+                      />
+                      <img
+                        src="./Resources/Images/images.jpeg"
+                        class="col-3"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row ps-4 pe-4">
+                      <img
+                        src="./Resources/Images/images.jpeg"
+                        class="col-3"
+                        alt="..."
+                      />
+                    </div>
+                  </div> -->
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <!-- <div class="row">
+                <div>
+                  <img
+                    src="./Resources/Images/images.jpeg"
+                    alt="Profile Image"
+                    width="115px"
+                    height="200px"
+                    class=""
+                  />
+                </div>
+              </div> -->
+            </div>
+            <!-- End of stories -->
+          </div>
+        </div>
+      </div>
+      <!-- right margin in middle -->
+      <div class="d-none d-lg-block w-25"></div>
+    </div>
+    <!-- Right -->
+    <div
+      class="right d-none d-md-block ms-3 ps-3 me-2"
+      style="z-index: 1; width: 250px"
+      id="chat"
+    >
+      <ul class="nav flex-column"></ul>
+    </div>
+  </body>
+</html>
+
+<!-- 
+/*********************************Start Log***************************************************
+    User               Date                Brief
+**********************************************************************************************
+Abd-Alla AboElMagd    31Dec2024           Finishing the Main Page with its Main HTML Content
+***********************************************************************************************/
+-->
